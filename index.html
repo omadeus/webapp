@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Table</title>
+  <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script> -->
+</head>
+<body>
+  <table id="feedbackTable">
+    <thead>
+      <tr>
+        <th>Feedbacks</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <textarea id="editText" rows="4" cols="50"></textarea>
+  <button id="sendButton">Send</button>
+
+  <script>
+    $(document).ready(function() {
+      $.getJSON("http://127.0.0.1:5500/feedbacks.json", function(data) {
+        var feedbacks = data.feedbacks;
+        var tableBody = $("#feedbackTable tbody");
+
+        feedbacks.forEach(function(feedback) {
+          var row = $("<tr>");
+          var cell = $("<td>");
+          var button = $("<button>").text(feedback);
+
+          button.click(function() {
+            $("#editText").val(feedback);
+          });
+
+          cell.append(button);
+          row.append(cell);
+          tableBody.append(row);
+        });
+      });
+
+      $("#sendButton").click(function() {
+        var text = $("#editText").val();
+        $.ajax({
+          url: "https://mybackend/postmessage",
+          method: "POST",
+          data: { text: text },
+          success: function(response) {
+            console.log("Message sent successfully");
+          },
+          error: function(error) {
+            console.log("Error sending message:", error);
+          }
+        });
+      });
+    });
+  </script>
+  <!-- <script>
+    $(document).ready(function() {
+      $('#feedbackTable').DataTable();
+    });
+  </script>   -->
+</body>
+</html>
