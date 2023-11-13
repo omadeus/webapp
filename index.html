@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -60,13 +61,27 @@
         button:hover {
             background: var(--tg-theme-secondary-bg-color);
         }
+
+        #form {
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #db5d5d;
+        }
     </style>
 </head>
 <body>
-    <div id="main">
-        <h1>Введите данные</h1>
-        <button id="on">Запустить</button>
-    </div>
     <form id="form">
         <input type="text" placeholder="Логин" id="login">
         <input type="text" placeholder="Пароль" id="pass">
@@ -74,5 +89,14 @@
         <button id="start">Запустить</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let start = document.getElementById("start");
+
+        order.addEventListener('click', () => {
+            tg.close()
+        })
+    </script>
+
 </body>
 </html>
