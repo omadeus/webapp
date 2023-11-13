@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Bugristoe srv-go </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monserrat:wght@200;500@display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Monserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg--theme-text-color);
+            backface-visibility: var(--tg-theme-bg-color);
+        }
+
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 70px;
+            mergin: 30px auto;
+        }
+
+        p {
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        button {
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+
+        button:hover {
+            background: var(--tg-theme-secondary-bg-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Введите данные</h1>
+        <button id="on">Запустить</button>
+    </div>
+    <form id="form">
+        <input type="text" placeholder="Логин" id="login">
+        <input type="text" placeholder="Пароль" id="pass">
+        <input type="text" placeholder="Номер авто" id="avto">
+        <button id="start">Запустить</button>
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</body>
+</html>
