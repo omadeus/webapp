@@ -20,6 +20,7 @@
             font-weight: 200;
             color: var(--tg-theme-text-color);
             backface-visibility: var(--tg-theme-bg-color);
+            background: var(--tg-theme-bg-color);
         }
 
         h1 {
@@ -85,8 +86,14 @@
     <script>
         let tg = window.Telegram.WebApp;
         let start = document.getElementById("start");
-
+        tg.MainButton.textColor = "#FFFFFF";
+        tg.MainButton.color = "#2cab37";
+        let login = document.getElementById("login");
+        let pass = document.getElementById("pass");
+        let avto = document.getElementById("avto");
+        let data = [login, pass, avto];
         start.addEventListener('click', () => {
+            tg.sendDaata(data)
             tg.close()
         })
     </script>
