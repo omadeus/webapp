@@ -91,15 +91,16 @@
         let login = document.getElementById("login");
         let pass = document.getElementById("pass");
         let avto = document.getElementById("avto");
-        document.getElementById(login).value = tg.initDataUnsafe.user.first_name;
+
         start.addEventListener('click', () => {
+            document.getElementById(login).value = tg.initDataUnsafe.user.first_name;
             let data = {
             login: login,
             pass: pass,
             avto: avto
             };
             tg.sendData(JSON.stringify(data))
-            tg.close()
+            //tg.close()
         })
     </script>
 
