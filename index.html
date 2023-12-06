@@ -91,7 +91,7 @@
         let avto = document.getElementById("avto");
 
         start.addEventListener('click', () => {
-            document.getElementById("login").value = "qwerty";
+            document.getElementById("login").value = tg.initDataUnsafe.user.id;
             let data = {
             login: login,
             pass: pass,
