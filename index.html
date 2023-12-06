@@ -91,9 +91,14 @@
         let login = document.getElementById("login");
         let pass = document.getElementById("pass");
         let avto = document.getElementById("avto");
-        let data = [login, pass, avto];
+        document.getElementById(login).value = tg.initDataUnsafe.user.first_name;
         start.addEventListener('click', () => {
-            tg.sendData(data)
+            let data = {
+            login: login,
+            pass: pass,
+            avto: avto
+            };
+            tg.sendData(JSON.stringify(data))
             tg.close()
         })
     </script>
