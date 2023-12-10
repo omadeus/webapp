@@ -2582,6 +2582,7 @@ p {
 
   .form-block {
     width: 80%;
+    margin-bottom: 0;
   }
 
   .submit-button {
@@ -2635,5 +2636,15 @@ p {
     border-radius: 5px;
     padding-top: 2px;
     padding-bottom: 0;
+  }
+
+  .sstart {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    background-color: #086ad7;
+    border-radius: 5px;
+    padding-top: 2px;
+    display: block;
   }
 }
