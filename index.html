@@ -94,7 +94,7 @@
             var con = []
             async function get() {
 
-                let res = await fetch(`http://89.105.223.97:8000/get_status?id=`+id, {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
+                let res = await fetch(`http://89.105.223.97:8000/get_status?id=`+toString(id), {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
                 let content = JSON.parse(await res.text())
                 console.log('111', content)
                 console.log('222', content["data"])
