@@ -89,8 +89,8 @@
         <script src="./tg.js" type="text/javascript"></script>
         <script>
             let tg = window.Telegram.WebApp;
-            tg.expand()
-            let id = tg.initDataUnsafe.user.id
+            tg.expand();
+            let id = tg.initDataUnsafe.user.id;
             var con = []
             async function get() {
 
@@ -179,7 +179,7 @@
                     return;
                 }
 
-                
+
                 async function gett() {
                     let res = await fetch(`http://89.105.223.97:8000/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ot=${ot_input.value}&do=${do_input.value}`, {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
                     let content = JSON.parse(await res.text())
