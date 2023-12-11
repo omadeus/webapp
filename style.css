@@ -2667,7 +2667,7 @@ p {
 
   .forma {
     width: 300px;
-    height: 500px;
+    height: 550px;
     background-color: #d7d9dc;
     flex-direction: column;
     justify-content: flex-start;
@@ -2713,9 +2713,9 @@ p {
   }
 
   .field-label-3 {
-    width: 100%;
+    width: auto;
     color: #324153;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
     font-weight: 500;
   }
@@ -2785,6 +2785,7 @@ p {
     grid-auto-flow: row;
     align-content: center;
     justify-content: center;
+    align-self: flex-start;
     align-items: center;
     justify-items: stretch;
     margin-bottom: 30px;
@@ -2792,13 +2793,13 @@ p {
   }
 
   .input-2 {
-    width: 100%;
+    width: auto;
     justify-content: space-between;
     display: block;
   }
 
   .input-3 {
-    width: 100%;
+    width: auto;
     display: block;
   }
 
@@ -2818,11 +2819,20 @@ p {
     display: flex;
   }
 
-  #w-node-_1f006ded-64ee-a404-a56e-9fa6d1ee2c07-890d0ad6, #w-node-ea772c70-1fba-e3c7-5022-7aa23173d082-890d0ad6 {
+  #w-node-_1f006ded-64ee-a404-a56e-9fa6d1ee2c07-890d0ad6 {
     justify-self: center;
   }
 
-  #w-node-_150c79b3-42a4-3143-34f2-0ba8b28f161c-890d0ad6, #w-node-_999a68cd-c2d6-665a-3ff8-b34a3902fb69-890d0ad6 {
+  #w-node-_150c79b3-42a4-3143-34f2-0ba8b28f161c-890d0ad6 {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+    justify-self: auto;
+  }
+
+  #w-node-ea772c70-1fba-e3c7-5022-7aa23173d082-890d0ad6 {
+    justify-self: center;
+  }
+
+  #w-node-_999a68cd-c2d6-665a-3ff8-b34a3902fb69-890d0ad6 {
     grid-area: span 1 / span 1 / span 1 / span 1;
     justify-self: auto;
   }
