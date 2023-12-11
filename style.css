@@ -2714,6 +2714,7 @@ p {
 
   .field-label-3 {
     width: auto;
+    height: 35px;
     color: #324153;
     text-align: left;
     margin-bottom: 0;
@@ -2721,7 +2722,9 @@ p {
   }
 
   .field-label-3.date {
+    height: 55px;
     text-align: left;
+    margin-bottom: 0;
   }
 
   .div-block-3 {
@@ -2779,6 +2782,7 @@ p {
   .div-block-4 {
     grid-column-gap: 5px;
     grid-row-gap: 5px;
+    flex: 0 auto;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
@@ -2788,8 +2792,12 @@ p {
     align-self: flex-start;
     align-items: center;
     justify-items: stretch;
-    margin-bottom: 30px;
+    margin-bottom: 14px;
     display: flex;
+  }
+
+  .div-block-4.div {
+    margin-bottom: 30px;
   }
 
   .input-2 {
@@ -2819,20 +2827,20 @@ p {
     display: flex;
   }
 
-  #w-node-_1f006ded-64ee-a404-a56e-9fa6d1ee2c07-890d0ad6 {
+  #w-node-_1f006ded-64ee-a404-a56e-9fa6d1ee2c07-890d0ad6, #w-node-_1de02a11-69eb-6f54-f285-d17e0fe21679-890d0ad6 {
     justify-self: center;
   }
 
-  #w-node-_150c79b3-42a4-3143-34f2-0ba8b28f161c-890d0ad6 {
+  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167b-890d0ad6 {
     grid-area: span 1 / span 1 / span 1 / span 1;
     justify-self: auto;
   }
 
-  #w-node-ea772c70-1fba-e3c7-5022-7aa23173d082-890d0ad6 {
+  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167c-890d0ad6 {
     justify-self: center;
   }
 
-  #w-node-_999a68cd-c2d6-665a-3ff8-b34a3902fb69-890d0ad6 {
+  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167e-890d0ad6 {
     grid-area: span 1 / span 1 / span 1 / span 1;
     justify-self: auto;
   }
