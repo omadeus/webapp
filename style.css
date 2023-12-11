@@ -2727,6 +2727,19 @@ p {
     margin-bottom: 0;
   }
 
+  .field-label-3.gg {
+    text-align: left;
+    align-self: center;
+    margin-left: 7px;
+    padding-top: 5px;
+    text-decoration: none;
+  }
+
+  .field-label-3.gh {
+    align-self: center;
+    padding-top: 5px;
+  }
+
   .div-block-3 {
     flex-direction: column;
     align-items: center;
@@ -2777,6 +2790,8 @@ p {
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 10px;
+    margin-left: 10px;
+    padding-left: 2px;
   }
 
   .div-block-4 {
@@ -2802,12 +2817,16 @@ p {
 
   .input-2 {
     width: auto;
+    height: 35px;
     justify-content: space-between;
+    margin-left: 10px;
     display: block;
   }
 
   .input-3 {
     width: auto;
+    height: 35px;
+    margin-left: 10px;
     display: block;
   }
 
