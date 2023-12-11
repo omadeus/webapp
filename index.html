@@ -90,11 +90,11 @@
         <script>
             let tg = window.Telegram.WebApp;
             tg.expand()
-            let id = 238398378//tg.initDataUnsafe.user.id
+            let id = tg.initDataUnsafe.user.id
             var con = []
             async function get() {
 
-                let res = await fetch('http://89.105.223.97:8000/get_status?id=238398378', {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
+                let res = await fetch(`http://89.105.223.97:8000/get_status?id=${id}`, {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
                 let content = JSON.parse(await res.text())
                 console.log('111', content)
                 console.log('222', content["data"])
@@ -130,26 +130,29 @@
             let start = document.getElementsByClassName("sstart w-button")[0];
             let close1 = document.getElementsByClassName("finish w-button")[0];
             let close2 = document.getElementsByClassName("finish w-button")[1];
+            var granica = 0
 
             function bug_click(){
-                let granica = 1;
+                granica = 1;
                 main.style.display = "none";
                 document.getElementsByClassName("forma")[0].style.display = "flex";
             }
             function cher_click(){
-                let granica = 2;
+                granica = 2;
                 main.style.display = "none";
                 document.getElementsByClassName("forma")[0].style.display = "flex";
             }
 
             function start_click(){
+
                 document.getElementById("error").innerText = ""
                 let login = document.getElementById("name").value;
                 let pass = document.getElementById("email").value;
                 let avto = document.getElementById("field").value;
                 let date_input = document.getElementsByClassName("input")[0];
-                let ot_input = document.getElementsByClassName("field-label-3 gh")[0];
-                let do_input = document.getElementsByClassName("field-label-3 gg")[0];
+                let ot_input = document.getElementsByClassName("input-2")[0];
+                let do_input = document.getElementsByClassName("input-3")[0];
+
 
                 if(login.length < 5) {
                     document.getElementById("error").innerText = "Ошибка в логине";
@@ -163,21 +166,30 @@
                     document.getElementById("error").innerText = "Ошибка в номере авто";
                     return;
                 }
-                if(date_input.length < 10) {
+                if(date_input.value.length < 10) {
                     document.getElementById("error").innerText = "Ошибка в дате";
                     return;
                 }
-                if(ot_input.length < 5) {
+                if(ot_input.value.length < 5) {
                     document.getElementById("error").innerText = "Ошибка во времени от";
                     return;
                 }
-                if(ot_input.length < 5) {
+                if(do_input.value.length < 5) {
                     document.getElementById("error").innerText = "Ошибка во времени до";
                     return;
                 }
+
+                
+                async function gett() {
+                    let res = await fetch(`http://89.105.223.97:8000/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ot=${ot_input.value}&do=${do_input.value}`, {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
+                    let content = JSON.parse(await res.text())
+                    console.log('order', content)
+                    document.getElementsByClassName("forma")[0].style.display = "none";
+                    document.getElementsByClassName("forma run")[0].style.display = "flex";
+
+                gett()
                 //let tg_id = tg.initDataUnsafe.user.id;
-                document.getElementsByClassName("forma")[0].style.display = "none";
-                document.getElementsByClassName("forma run")[0].style.display = "flex";
+
             }
             function close() {
                 let tg = window.Telegram.WebApp;
