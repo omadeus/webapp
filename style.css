@@ -2821,16 +2821,23 @@ p {
   .input-2 {
     width: auto;
     height: 35px;
+    overflow-wrap: normal;
     justify-content: space-between;
+    align-self: center;
+    align-items: center;
     margin-left: 0;
-    display: block;
+    font-weight: 500;
+    display: flex;
   }
 
   .input-3 {
     width: auto;
     height: 35px;
+    align-self: center;
+    align-items: center;
     margin-left: 0;
-    display: block;
+    font-weight: 500;
+    display: flex;
   }
 
   .text-field-2, .text-field-3 {
