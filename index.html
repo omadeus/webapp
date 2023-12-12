@@ -122,6 +122,12 @@
             let close1 = document.getElementsByClassName("finish w-button")[0];
             let close2 = document.getElementsByClassName("finish w-button")[1];
             var granica = 0
+            let login = document.getElementById("name").value;
+            let pass = document.getElementById("email").value;
+            let avto = document.getElementById("field").value;
+            let date_input = document.getElementsByClassName("input")[0];
+            let ot_input = document.getElementsByClassName("input-2")[0];
+            let do_input = document.getElementsByClassName("input-3")[0];
 
             function bug_click(){
                 granica = 1;
@@ -137,12 +143,7 @@
             function start_click(){
 
                 document.getElementById("error").innerText = ""
-                let login = document.getElementById("name").value;
-                let pass = document.getElementById("email").value;
-                let avto = document.getElementById("field").value;
-                let date_input = document.getElementsByClassName("input")[0];
-                let ot_input = document.getElementsByClassName("input-2")[0];
-                let do_input = document.getElementsByClassName("input-3")[0];
+
 
 
                 if(login.length < 5) {
