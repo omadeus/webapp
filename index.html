@@ -95,7 +95,7 @@
             var con = []
             async function get() {
 
-                let res = await fetch(`https://omad-webapp-fastapi.onrender.com/get_status?id=${id}`, {mode: "cors", method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
+                let res = await fetch(`https://vm56196.vps.client-server.site/get_status?id=${id}`, {mode: "cors", method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
                 let content = JSON.parse(await res.text())
                 console.log('111', content)
                 console.log('222', content["data"])
@@ -174,7 +174,7 @@
 
 
                 async function gett() {
-                    let res = await fetch(`https://omad-webapp-fastapi.onrender.com/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ot=${ot_input.value}&do=${do_input.value}`, {
+                    let res = await fetch(`https://vm56196.vps.client-server.site/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ot=${ot_input.value}&do=${do_input.value}`, {
                         method: "GET",
                         headers: {"Content-type": "application/json; charset=UTF-8"},
                         mode: "cors"
