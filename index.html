@@ -94,7 +94,7 @@
             var con = []
             async function get() {
 
-                let res = await fetch(`http://89.105.223.97:8000/get_status?id=`+toString(id), {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
+                let res = await fetch(`http://89.105.223.97:8000/get_status?id=${id}`, {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
                 let content = JSON.parse(await res.text())
                 console.log('111', content)
                 console.log('222', content["data"])
@@ -112,15 +112,6 @@
 
             }
             get()
-
-
-
-
-
-
-
-
-
 
         </script>
         <script>
@@ -181,11 +172,15 @@
 
 
                 async function gett() {
-                    let res = await fetch(`http://89.105.223.97:8000/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ot=${ot_input.value}&do=${do_input.value}`, {method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
+                    let res = await fetch(`http://89.105.223.97:8000/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ot=${ot_input.value}&do=${do_input.value}`, {
+                        method: "GET",
+                        headers: {"Content-type": "application/json; charset=UTF-8"}
+                    })
                     let content = JSON.parse(await res.text())
                     console.log('order', content)
                     document.getElementsByClassName("forma")[0].style.display = "none";
                     document.getElementsByClassName("forma run")[0].style.display = "flex";
+                }
 
                 gett()
                 //let tg_id = tg.initDataUnsafe.user.id;
