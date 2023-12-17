@@ -35,6 +35,7 @@
                 <div class="text-block-2">Выбери АПП</div>
                 <a href="#" class="chernyshevskoe w-button">Бугристое</a>
                 <a href="#" class="chernyshevskoe w-button">Чернышевское</a>
+                <a href="#" class="chernyshevskoe w-button">Забайкальск</a>
             </div>
             <div class="forma">
                 <div class="form-block w-form">
@@ -119,6 +120,7 @@
         <script>
             let bug = document.getElementsByClassName("chernyshevskoe w-button")[0];
             let cher = document.getElementsByClassName("chernyshevskoe w-button")[1];
+            let zab = document.getElementsByClassName("chernyshevskoe w-button")[2];
             let main = document.getElementsByClassName("div-block-3")[0];
             let start = document.getElementsByClassName("sstart w-button")[0];
             let close1 = document.getElementsByClassName("finish w-button")[0];
@@ -132,6 +134,11 @@
             }
             function cher_click(){
                 granica = 2;
+                main.style.display = "none";
+                document.getElementsByClassName("forma")[0].style.display = "flex";
+            }
+            function zab_click(){
+                granica = 3;
                 main.style.display = "none";
                 document.getElementsByClassName("forma")[0].style.display = "flex";
             }
@@ -196,6 +203,7 @@
             }
             bug.addEventListener("click", bug_click, {"once": true});
             cher.addEventListener("click", cher_click, {"once": true});
+            zab.addEventListener("click", cher_click, {"once": true});
             start.addEventListener("click", start_click);
             close1.addEventListener("click", close);
             close2.addEventListener("click", close);
