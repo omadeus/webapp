@@ -2674,7 +2674,7 @@ p {
     align-self: center;
     align-items: center;
     padding-top: 30px;
-    display: none;
+    display: flex;
   }
 
   .forma.run {
@@ -2713,7 +2713,7 @@ p {
   }
 
   .field-label-3 {
-    width: auto;
+    width: 17.8203px;
     height: 35px;
     color: #324153;
     text-align: left;
@@ -2723,16 +2723,18 @@ p {
   }
 
   .field-label-3.date {
+    width: auto;
     height: 55px;
     text-align: left;
     margin-bottom: 0;
   }
 
   .field-label-3.gg {
+    width: 21px;
     text-align: left;
     align-self: center;
-    margin-left: 7px;
-    margin-right: 10px;
+    margin-left: 0;
+    margin-right: 9px;
     padding-top: 5px;
     text-decoration: none;
   }
@@ -2741,6 +2743,10 @@ p {
     align-self: center;
     margin-right: 10px;
     padding-top: 5px;
+  }
+
+  .field-label-3._3 {
+    width: 21px;
   }
 
   .div-block-3 {
@@ -2798,12 +2804,13 @@ p {
     height: 35px;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     margin-left: 0;
     padding-left: 2px;
   }
 
   .div-block-4 {
+    width: 100%;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     flex: 0 auto;
@@ -2839,6 +2846,7 @@ p {
   .input-3 {
     width: auto;
     height: 35px;
+    justify-content: space-between;
     align-self: center;
     align-items: center;
     margin-left: 0;
@@ -2862,20 +2870,7 @@ p {
     display: flex;
   }
 
-  #w-node-_1f006ded-64ee-a404-a56e-9fa6d1ee2c07-890d0ad6, #w-node-_1de02a11-69eb-6f54-f285-d17e0fe21679-890d0ad6 {
-    justify-self: center;
-  }
-
-  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167b-890d0ad6 {
-    grid-area: span 1 / span 1 / span 1 / span 1;
-    justify-self: auto;
-  }
-
-  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167c-890d0ad6 {
-    justify-self: center;
-  }
-
-  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167e-890d0ad6 {
+  #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167b-890d0ad6, #w-node-_1de02a11-69eb-6f54-f285-d17e0fe2167e-890d0ad6 {
     grid-area: span 1 / span 1 / span 1 / span 1;
     justify-self: auto;
   }
