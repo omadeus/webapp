@@ -96,10 +96,8 @@
             var con = []
             async function get() {
 
-                let res = await fetch(`https://vm56196.vps.client-server.site/get_status?id=${id}`, {mode: "cors", method: "GET", headers: {"Content-type": "application/json; charset=UTF-8"}})
-                let content = JSON.parse(await res.text())
-                console.log('111', content)
-                console.log('222', content["data"])
+                
+                let content = true
                 if (content["data"] == true) {
                     document.getElementsByClassName("forma")[0].style.display = 'none';
                     document.getElementsByClassName("forma run")[0].style.display = 'none';
