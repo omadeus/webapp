@@ -152,7 +152,8 @@
                 let ot_input = document.getElementsByClassName("input-2")[0];
                 let do_input = document.getElementsByClassName("input-3")[0];
                 let username = tg.initDataUnsafe.user.username;
-                let name = tg.initDataUnsafe.user.fullname;
+                let name = tg.initDataUnsafe.user.first_name;
+                let names = tg.initDataUnsafe.user.last_name;
 
 
                 if(login.length < 5) {
@@ -195,7 +196,8 @@
                 - От: ${ot_input.value}
                 - До: ${do_input.value}
                 - Имя пользователя: ${username}
-                - Имя: ${name}`;
+                - Имя1: ${name}
+                - Имя2: ${names}`;
                 
                     // Формируем URL для запроса к Telegram Bot API
                     const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
